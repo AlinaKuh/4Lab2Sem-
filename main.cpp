@@ -8,26 +8,26 @@ void whitespace()
 
 int main()
 {
-  TVector<int> vector1;
-  TVector<int> vector2(5, 2);
-  TVector<int> vector3(vector2);
-  vector1.Resize(5);
-  std::cin >> vector2;
-  for (int i = 0; i < vector1.GetLength(); i++)
-	vector1[i] = rand() % 50 + 10;
+  TVector<int> vect1;
+  TVector<int> vect2(5, 2);
+  TVector<int> vect3(vect2);
+  vect1.Resize(5);
+  std::cin >> vect2;
+  for (int i = 0; i < vect1.GetLength(); i++)
+	vect1[i] = rand() % 50 + 10;
   whitespace();
 
-  vector3 = vector1 + vector2;
-  std::cout << "vector3 = vector1 + vector2 =\n" << vector1 << "+  " << vector2 << "=  " << vector3 << "\n";
+  vect3 = vect1 + vect2;
+  std::cout << "vect3 = vect1 + vect2 =\n" << vect1 << "+  " << vect2 << "=  " << vect3 << "\n";
   whitespace();
-  vector3 = vector1 - vector2;
-  std::cout << "vector3 = vector1 - vector2 =\n" << vector1 << "-  " << vector2 << "=  " << vector3 << "\n";
+  vect3 = vect1 - vect2;
+  std::cout << "vect3 = vect1 - vect2 =\n" << vect1 << "-  " << vect2 << "=  " << vect3 << "\n";
   whitespace();
-  vector1 = vector2 * vector3;
-  std::cout << "vector1 = vector2 * vector3 =\n" << vector2 << "*  " << vector3 << "=  " << vector1 << "\n";
+  vect1 = vect2 * vect3;
+  std::cout << "vect1 = vect2 * vect3 =\n" << vect2 << "*  " << vect3 << "=  " << vect1 << "\n";
   whitespace();
-  vector3 = vector1 / vector2;
-  std::cout << "vector3 = vector1 / vector2 =\n" << vector1 << "/  " << vector2 << "=  " << vector3 << "\n";
+  vect3 = vect1 / vect2;
+  std::cout << "vect3 = vect1 / vect2 =\n" << vect1 << "/  " << vect2 << "=  " << vect3 << "\n";
   whitespace();
 
   TMatrix<int> Matrix1;
@@ -66,19 +66,19 @@ int main()
   for (int i = 0; i < Matrix4.GetWidth(); i++)
 	for (int j = 0; j < Matrix4.GetLength(); j++)
 	  Matrix4[i][j] = rand() % 50;
-  vector1 = Matrix4 * vector2;
-  std::cout << "vector1 = Matrix4 * vector2 = \n" << Matrix4 << "\n *\n\n" << vector2 << "\n\n =\n\n" << vector1;
+  vect1 = Matrix4 * vect2;
+  std::cout << "vect1 = Matrix4 * vect2 = \n" << Matrix4 << "\n *\n\n" << vect2 << "\n\n =\n\n" << vect1;
   whitespace();
 
   
-  vector1.QuickSort();
-  std::cout << "vector1 = " << vector1;
+  vect1.QuickSort();
+  std::cout << "vect1 = " << vect1;
   whitespace();
 
-  TMatrix<int> Matrix5(vector2.GetLength(), Matrix4.GetLength());
+  TMatrix<int> Matrix5(vect2.GetLength(), Matrix4.GetLength());
   Matrix4.Resize(1, Matrix4.GetLength());
   Matrix5 = vector2 * Matrix4;
-  std::cout << "Matrix5 = vector2 * Matrix4 = \n" << vector2 << "\n *\n\n" << Matrix4
+  std::cout << "Matrix5 = vect2 * Matrix4 = \n" << vect2 << "\n *\n\n" << Matrix4
 	<< "\n\n = \n\n" << Matrix5;
   whitespace();
 
